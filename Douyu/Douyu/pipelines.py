@@ -21,7 +21,6 @@ class DouyuPipeline(object):
     def __del__(self):
         self.file.close()
 
-
 class DouyuImagesPipeline(ImagesPipeline):
     images_store = IMAGES_STORE
 
