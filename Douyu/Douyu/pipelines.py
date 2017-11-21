@@ -26,7 +26,6 @@ class DouyuImagesPipeline(ImagesPipeline):
 
     def get_media_requests(self, item, info):
         yield scrapy.Request(item['image'])
-
     def item_completed(self, results, item, info):
         image = [ data['path']  for status, data in results if status][0]
         old_name = self.images_store + os.sep + image
